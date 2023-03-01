@@ -41,6 +41,7 @@ def message_handle(message:Message,bot:TeleBot):
 from db import db
 def send_message(ChatjoinRequest,bot:TeleBot):
     file=open('message.txt')
+    print(ChatjoinRequest)
     try:
         bot.approve_chat_join_request(ChatjoinRequest.chat,ChatjoinRequest.from_user)
     except Exception as e:
